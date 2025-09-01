@@ -137,9 +137,4 @@ License
 This project is for educational purposes.
 
 
----
-
-I can also make a **shorter, GitHub-friendly version with badges and images** if you want it ready for a public repo.  
-
-Do you want me to do that?
 
