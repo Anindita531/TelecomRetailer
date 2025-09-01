@@ -40,8 +40,82 @@ com.airtel
 ├── Database.java # Database connection
 └── ...
 
+Retailer Telecom Simulator GUI
 
----
+A JavaFX-based desktop application for managing users, plans, and transactions in a telecom retail system.
+
+Prerequisites
+
+JDK 17+ installed (Download here
+)
+
+JavaFX SDK 24.0.2 downloaded and extracted (Download here
+)
+
+MySQL Connector/J jar if using MySQL database
+
+IDE (Optional): IntelliJ IDEA or VSCode
+
+Folder Structure
+RetailerTelecomSimulatoGUI/
+├─ lib/
+│  ├─ javafx-sdk-24.0.2/        # JavaFX SDK folder
+│  └─ mysql-connector-j-9.3.0.jar
+├─ src/
+│  └─ com/airtel/               # Source code
+├─ README.md
+
+1. Compile via Command Prompt
+
+Open a command prompt in the src folder:
+
+javac --module-path "D:\Learning From Zero\RetailerTelecomSimulatoGUI\lib\javafx-sdk-24.0.2\lib" --add-modules javafx.controls,javafx.fxml com\airtel\*.java
+
+
+--module-path points to the JavaFX lib folder.
+
+--add-modules specifies the JavaFX modules you are using (controls and fxml).
+
+2. Run via Command Prompt
+java --module-path "D:\Learning From Zero\RetailerTelecomSimulatoGUI\lib\javafx-sdk-24.0.2\lib" --add-modules javafx.controls,javafx.fxml -cp ".;D:\Learning From Zero\RetailerTelecomSimulatoGUI\lib\mysql-connector-j-9.3.0.jar" com.airtel.MainFX
+
+
+-cp includes both compiled classes (.) and external libraries (MySQL connector).
+
+Replace com.airtel.MainFX with the fully-qualified main class if different.
+
+3. Run in IntelliJ IDEA
+
+Add JavaFX SDK:
+
+File → Project Structure → Libraries → + → Add javafx-sdk-24.0.2/lib
+
+Set VM options:
+
+Run → Edit Configurations → VM options:
+
+--module-path D:\Learning From Zero\RetailerTelecomSimulatoGUI\lib\javafx-sdk-24.0.2\lib --add-modules javafx.controls,javafx.fxml
+
+
+Add MySQL Connector to Project Libraries.
+
+4. Run in VSCode
+
+Install Java Extension Pack.
+
+Open folder, then add JavaFX SDK in settings.json or .classpath.
+
+Use the Run Configuration with VM options:
+
+--module-path D:\Learning From Zero\RetailerTelecomSimulatoGUI\lib\javafx-sdk-24.0.2\lib --add-modules javafx.controls,javafx.fxml
+
+5. Notes
+
+Make sure absolute paths are used in command-line instructions.
+
+Use compatible JDK version (17 or above recommended).
+
+Ensure the MySQL JDBC driver is included in the classpath if database functionality is required.
 
 ## Prerequisites
 
